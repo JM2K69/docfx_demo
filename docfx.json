@@ -1,45 +1,54 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "src": "../src",
-          "files": [
-            "**/*.csproj"
-          ]
-        }
-      ],
-      "dest": "api"
-    }
-  ],
+
   "build": {
+    "sitemap": {
+      "baseUrl": "",
+      "priority": 0.1,
+      "changefreq": "monthly"
+    },
     "content": [
       {
-        "files": [
-          "**/*.{md,yml}"
-        ],
-        "exclude": [
-          "_site/**"
-        ]
+        "files": [ "**/*.{md,yml}" ],
+        "exclude": [ "_site/**", "obj/**" ]
       }
     ],
     "resource": [
       {
-        "files": [
-          "images/**"
-        ]
+        "files": [ "**/images/**", "images/**", "**/ressources/**", "ressources/**" ]
       }
     ],
-    "output": "_site",
+    "postProcessors": [ "ExtractSearchIndex" ],
+    "globalMetadata": {
+      "_appTitle": "Demo docfx",
+      "_enableSearch": "true",
+      "_enableNewTabForExternalLink": "true",
+      "_disableContribution": "true",
+      "_appFooter":"docfx Demo © 2024",
+      "_appLogoPath": "../images/logo_certa_alpa.png",
+      "_appFaviconPath": "../images/favicon.png",
+      "_language": "fr",
+      "pdf": true,
+      "pdfTocPage": true
+    },
+    "markdownEngineProperties": {
+      "markdigExtensions": [
+        "Abbreviations",
+        "Footnotes",
+        "EmphasisExtras",
+        "CustomContainers",
+        "Footers",
+        "TaskLists",
+        "Bootstrap"
+    ],
+      "alerts": {
+        "TODO": "alert alert-success"
+      }
+    },
+    "dest": "_site",
     "template": [
       "default",
-      "modern"
-    ],
-    "globalMetadata": {
-      "_appName": "",
-      "_appTitle": "",
-      "_enableSearch": true,
-      "pdf": true
-    }
+      "modern",
+      "chartreux"
+    ]
   }
 }
