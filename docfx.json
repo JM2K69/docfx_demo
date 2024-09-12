@@ -24,7 +24,7 @@
       "_enableNewTabForExternalLink": "true",
       "_disableContribution": "true",
       "_appFooter":"docfx Demo © 2024",
-      "_appLogoPath": "../images/logo_certa_alpa.png",
+      "_appLogoPath": "/images/logo_certa_alpa.png",
       "_appFaviconPath": "../images/favicon.png",
       "_language": "fr",
       "pdf": true,
