@@ -1,0 +1,14 @@
+- name: Annexes HardenAD
+  expanded: true
+  href: index.md
+  items:
+  - name: Variables
+    expanded: false
+    items:
+    - name: Dynamic Variables
+      href: Annexe-DynamicVariableList.md
+  - name: Tools
+    expanded: false
+    items:
+    - name: HardenAD Tools
+      href: Annexe-Tools.md
